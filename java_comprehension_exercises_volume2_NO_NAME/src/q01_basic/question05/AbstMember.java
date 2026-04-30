@@ -6,11 +6,17 @@ package q01_basic.question05;
  * 
  */
 abstract class AbstMember {
-
 	/**
 	 * name protected access
 	 */
 	protected String name;
+
+	public AbstMember(String name) {
+		this.name = name;
+	}
+
+	public AbstMember() {
+	}
 
 	/**
 	 * 商品を購入する（メッセージ出力）

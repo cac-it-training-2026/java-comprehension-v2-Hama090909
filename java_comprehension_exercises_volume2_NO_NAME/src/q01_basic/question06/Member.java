@@ -1,23 +1,11 @@
-package q01_basic.question04;
+package q01_basic.question06;
 
-class Member {
-	//TODO ここから実装する
+public class Member extends AbstMember {
 	int id;
-	String pasword;
+	String password;
 	String name;
 	int age;
 	int rank;
-
-	public Member() {
-	}
-
-	public Member(int id, String pasword, String name, int age, int rank) {
-		this.id = id;
-		this.pasword = pasword;
-		this.name = name;
-		this.age = age;
-		this.rank = rank;
-	}
 
 	public int getId() {
 		return id;
@@ -28,11 +16,11 @@ class Member {
 	}
 
 	public String getPassword() {
-		return pasword;
+		return password;
 	}
 
-	public void setPassword(String pas) {
-		this.pasword = pas;
+	public void setPasword(String password) {
+		this.password = password;
 	}
 
 	public String getName() {
@@ -59,10 +47,28 @@ class Member {
 		this.rank = rank;
 	}
 
-	void showMember() {
+	public Member(int id, String password, String name, int age, int rank) {
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.age = age;
+		this.rank = rank;
+	}
+
+	public Member() {
+	}
+
+	@Override
+	public void buyItem() {
+		System.out.println();
+	}
+
+	@Override
+	public void showMember() {
+		System.out.println("---SHOW MEMBERS---");
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id:" + id);
-		System.out.println("Password:" + pasword);
+		System.out.println("Password:" + password);
 		System.out.println("name:" + name);
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
